@@ -2,9 +2,9 @@
     This project provide how can i use java script to add any feature dynamicly to the html , css page 
     show the power of DOM how can i acsses the tags andmake any changes not in html alone but with acsses css and make changes 
 
-    The project Link on [GitHub](https://github.com/MostafaLotfy91/Landing-Page-DOM_JS) 
+    The project Link on GitHub (https://github.com/MostafaLotfy91/Landing-Page-DOM_JS) 
 
-    the starter code [click here](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
+    the starter code (https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
 ### Installation
     No additional installation is required for this project you can only use the chrome or ire fox 
 ### Project functionalities 
