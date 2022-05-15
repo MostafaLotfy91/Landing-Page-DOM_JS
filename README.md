@@ -29,4 +29,4 @@
     Open (index.html) in the browser 
 
 ### References
-    know moe about bounding GetBoundingClintRect https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+    know moe about bounding GetBoundingClintRect https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect.
