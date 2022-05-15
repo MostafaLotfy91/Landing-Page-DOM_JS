@@ -36,7 +36,7 @@ headerStyle.style.cssText='background: linear-gradient(0deg, rgba(136,203,171,1)
 //I get the info from this link (https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
 function isOnScreen(element) {
-    var bounding = element.getBoundingClientRect();
+    let bounding = element.getBoundingClientRect();
 
     return (
         bounding.top >= 0 &&
@@ -48,6 +48,8 @@ function isOnScreen(element) {
 // put class 'active' to sections when on screen
 function styleOnScreenSection(section) {
     section.classList.add("your-active-class", "active");
+    notstyleNav();
+    styleNav(section.getAttribute('id'));
 }
 //Function to remove onsceen classes
 function notOnScreenSection() {
@@ -55,6 +57,27 @@ function notOnScreenSection() {
         secItems[i].classList.remove("your-active-class", "active");
     }
 }
+
+
+// view or ighlight navebar focus 
+function styleNav(li) {
+    let navLi = document.querySelectorAll(".createdli");
+    for(let i = 0;i<navLi.length;i++){
+        if(navLi[i].getAttribute('href') == `#${li}`) {
+            navLi[i].classList.add("active-nav");
+        }
+    }
+
+}
+
+// Function to remove navebar focus 
+function notstyleNav() {
+    let navLi = document.querySelectorAll(".createdli");
+    for(let i = 0;i<navLi.length;i++){
+        navLi[i].classList.remove("active-nav");
+    }
+}
+
 
 // Scroll to anchor ID using scrollTO event
 function scrollBevavior() {
@@ -91,13 +114,14 @@ function buildNavbar() {
 // Set sections as active
 window.addEventListener('scroll', function (event) {
     event.preventDefault();
-    
     secItems.forEach((section) => {
         if (isOnScreen(section)) {
             notOnScreenSection();
             styleOnScreenSection(section);
+            
         } else if(window.scrollY===0) {
             notOnScreenSection();
+            notstyleNav();
         }
     }, false);
 });

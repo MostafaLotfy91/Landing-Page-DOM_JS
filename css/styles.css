@@ -236,5 +236,10 @@ section.your-active-class .landing__container::after {
     border: 1px solid #fff;
 }
 .createdli:hover{
-    color: blue;
+    color: rgb(0, 247, 255);
+}
+
+
+.active-nav{
+    background-color: rgb(0, 247, 255);
 }
